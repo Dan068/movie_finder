@@ -1,12 +1,13 @@
 const ListOfMovie= ({movies})=>{
   return(
-    <ul>
-    {movies.map(movie =>(
-      <li key={movie.imdbID}>
-        <h2>{movie.title}</h2>
-        <img src={movie.poster} alt="" />
-        <span>{movie.year}</span>
-      </li>
+    <ul className="movies">
+    {
+      movies.map(movie =>(
+        <li  className="movie" key={movie.key}>
+          <h2>{movie.title}</h2>
+          <span>{movie.year}</span>
+          <img src={movie.poster} alt="" />
+        </li>
     ))}
   </ul>
   )
